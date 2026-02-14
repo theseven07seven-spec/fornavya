@@ -1,12 +1,12 @@
 #envelope {
   position: relative;
-  width: 280px;
+  width: 560px;
   height: 180px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  margin-left: auto;
+  margin-left: 430px;
   margin-right: auto;
-  top: 150px;
+  top: 250px;
   background-color: #d9534f; /* Warm romantic red */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -19,33 +19,33 @@
 }
 
 .flap {
-  border-left: 140px solid transparent;
-  border-right: 140px solid transparent;
-  border-bottom: 82px solid transparent;
+  border-left: 280px solid transparent;
+  border-right: 280px solid transparent;
+  border-bottom: 164px solid transparent;
   /* a little smaller */
-  border-top: 98px solid #d9534f; /* Same romantic red */
+  border-top: 196px solid #d9534f; /* Same romantic red */
   /* a little larger */
   transform-origin: top;
   pointer-events: none;
 }
 
 .pocket {
-  border-left: 140px solid #f5a3a2; /* Soft pinkish red for the pocket */
-  border-right: 140px solid #f5a3a2;
-  border-bottom: 90px solid #ff6f61; /* Lighter romantic red */
-  border-top: 90px solid transparent;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-left: 280px solid #f5a3a2; /* Soft pinkish red for the pocket */
+  border-right: 280px solid #f5a3a2;
+  border-bottom: 180px solid #ff6f61; /* Lighter romantic red */
+  border-top: 180px solid transparent;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .letter {
   position: relative;
   background-color: #fff;
-  width: 90%;
+  width: 560px;
   margin-left: auto;
   margin-right: auto;
-  height: 90%;
-  top: 5%;
+  height: 310px;
+  top: 10%;
   border-radius: 6px;
   box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
   font-family: "Dancing Script", cursive;
@@ -62,34 +62,41 @@
 
 .words {
   position: absolute;
-  left: 10%;
+  left: 30px;
   width: 80%;
   height: 14%;
-  background-color: #ffe6e6; /* Light romantic tone */
+  background-color: #ffaed7;
 }
 
 .words.line1 {
-  top: 10%;
-  font-size: 0.5rem;
-  width: 20%;
-  height: 7%;
-  font-size: 0.7rem;
+  top: 10px;
+  font-size: 0.8rem;
+  width: 17%;
+  height: 8%;
+  font-size: 0.9rem;
+
+  border-radius: 10px;
 }
 
 .words.line2 {
-  top: 30%;
+  top: 35px;
   text-align: center;
   font-size: 1.1rem;
 }
 
 .words.line3 {
-  top: 50%;
+  top: 115px;
   font-size: 1.1rem;
   text-align: center;
 }
 
 .words.line4 {
-  top: 70%;
+  top: 235px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.words.line5 {
+  top: 300px;
   font-size: 1.1rem;
   text-align: center;
 }
@@ -119,7 +126,7 @@
 }
 
 .open .letter {
-  transform: translateY(-100px);
+  transform: translateY(-310px);
   transition:
     transform 0.4s 0.6s ease,
     z-index 0.6s;
@@ -215,6 +222,36 @@
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
+.a4 {
+  left: 10%;
+  transform: scale(0.8);
+  opacity: 1;
+  -webkit-animation:
+    slideUp 7s linear 1,
+    sideSway 2s ease-in-out 6 alternate;
+  -moz-animation:
+    slideUp 7s linear 1,
+    sideSway 2s ease-in-out 6 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.a5 {
+  left: 10%;
+  transform: scale(0.8);
+  opacity: 1;
+  -webkit-animation:
+    slideUp 7s linear 1,
+    sideSway 2s ease-in-out 6 alternate;
+  -moz-animation:
+    slideUp 7s linear 1,
+    sideSway 2s ease-in-out 6 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
 
 @-webkit-keyframes slideUp {
   0% {
@@ -250,14 +287,16 @@
 }
 body {
   background-color: #f0e6f6; /* Soft lavender for a romantic, dreamy feel */
+  padding-bottom: 100px;
 }
 
 .envlope-wrapper {
-  height: 380px;
+  height: 480px;
 }
 
 .reset {
   text-align: center;
+  margin-top: 150px;
 }
 
 .reset button {
